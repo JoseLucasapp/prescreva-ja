@@ -1,7 +1,23 @@
 import Input from "../../components/input/input";
 import './index.css'
 
+import Swal from 'sweetalert2'
+
 const Doc_register = () => {
+
+    const handleClear = () => {
+        document.getElementById('speciality').value = ''
+    }
+
+    const sendForm = () => {
+        Swal.fire({
+            title: 'Formulário enviado !',
+            icon: 'success',
+            confirmButtonText: 'Voltar',
+            confirmButtonColor: "#0D3149",
+        }).then(() => window.location.reload())
+    }
+
     return (
         <div className="main">
             <div className="top-config">
@@ -32,8 +48,8 @@ const Doc_register = () => {
                             <div className="speciality">
                                 <label htmlFor="">Especialidade</label>
                                 <div>
-                                    <input type="text" placeholder="Todas" />
-                                    <button>Limpar</button>
+                                    <input id="speciality" type="text" placeholder="Todas" />
+                                    <button onClick={() => handleClear()}>Limpar</button>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +66,7 @@ const Doc_register = () => {
                         </div>
                     </div>
                     <div className="send-btn">
-                        <button>ENVIAR</button>
+                        <button onClick={() => sendForm()}>ENVIAR</button>
                     </div>
                 </div>
             </div>
