@@ -154,6 +154,7 @@ button {
     display: flex;
     width: 100%;
 
+
 }
 
 .speciality div input {
@@ -167,6 +168,7 @@ button {
     width: 70%;
     font-weight: 700;
     font-size: 18px;
+    box-shadow: 0px 4px #00000040;
 }
 
 .speciality div button {
@@ -180,9 +182,8 @@ button {
     outline: none;
     border: transparent;
     color: #fff;
+    box-shadow: 0px 4px #00000040;
 }
-
-
 
 .send-btn {
     width: 100%;
@@ -204,4 +205,58 @@ button {
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 760px) {
+
+    .top {
+        height: 150px;
+    }
+
+    .top .logo {
+        display: none;
+    }
+
+    .top .title {
+        margin: 0;
+    }
+
+    .top .title p {
+        font-size: 40px;
+    }
+
+    .form {
+        width: 90vw;
+    }
+
+    .top-form {
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+    }
+
+    .first-part,
+    .second-part {
+        width: 90% !important;
+    }
+
+    .inputs {
+        flex-direction: column;
+    }
+
+    .middle-inputs {
+        flex-direction: column;
+    }
+
+    .middle-inputs input {
+        width: 98%;
+    }
+
+    .send-btn {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .speciality div button {
+        font-size: 20px;
+    }
 }
