@@ -1,0 +1,41 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+}
+
+.input-container.second {
+    align-items: end;
+}
+
+.input-container.second .label {
+    width: 90%;
+    align-items: start;
+    display: flex;
+}
+
+.input-container .label {
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+.input-container label {
+    font-weight: 700;
+    font-family: var(--font-default);
+    font-size: 18px;
+}
+
+.input-container input {
+    padding-left: 10px;
+    font-family: var(--font-default);
+    border-radius: 10px;
+    outline: none;
+    border: transparent;
+    height: 50px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0px 4px #00000040;
+}
